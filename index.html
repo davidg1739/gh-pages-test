@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <h1>One Of My Old P5JS Sketchess</h1>
+    <title>Bouncing Ball</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+        
+        var x; // horizontal position
+        var xSpeed; // horizontal speed
+        var y;
+        var ySpeed;
+        function setup() {
+            createCanvas(500,500);
+            x = 0; // start on the left edge
+            xSpeed = 5; // move to the right (5 pixels per frame)
+            ySpeed = 5
+            y = 0
+        }
+
+        function draw() {
+            background(255);
+            ellipse(x,100,100,100);
+            ellipse(250,y,100,100)
+            
+            x += xSpeed; // change the x position by the speed
+            y += ySpeed;
+            
+            // bounce off the right edge
+            if(x > width){ // past the right edge?
+                xSpeed = -5; // move left
+            }
+            
+            // YOUR TASK: bounce off the left edge
+            else if(x < 1){
+                xSpeed = 5
+            }
+            // EXTENSION: bounce off the top/bottom edges
+            
+            if(y > height){
+                ySpeed= -5
+            }
+            else if(y < 1){
+                ySpeed = 5
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
