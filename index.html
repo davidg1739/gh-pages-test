@@ -7,16 +7,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
     <script>
         
-        var x; // horizontal position
-        var xSpeed; // horizontal speed
-        var y;
-        var ySpeed;
+        let x; // horizontal position
+        let xSpeed; // horizontal speed
+        let y;
+        let ySpeed;
+        let testbutton;
+        
+        
         function setup() {
             createCanvas(500,500);
             x = 0; // start on the left edge
             xSpeed = 5; // move to the right (5 pixels per frame)
             ySpeed = 5
             y = 0
+            testbutton = createButton("This button does not do anything!");
         }
 
         function draw() {
